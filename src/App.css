@@ -1,0 +1,5 @@
+body {
+  width: var(--view-width);
+  max-width: var(--max-width);
+  margin: 0 auto
+}

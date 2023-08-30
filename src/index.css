@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap");
+
+/* Reset */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global */
+:root {
+  /* Fonts */
+  --font-fancy: "Yellowtail", cursive;
+  --font-default: "Roboto", sans-serif;
+  /* Colors */
+  /* Basic */
+  --clr-light: #f8fafc;
+  --clr-dark: #0f172a;
+  --clr-medium: #F0F0F0;
+  /* Dark Mode */
+  --dark-mode-bg-color: #333;
+  --dark-mode-text-color: #f0f0f0;
+  --dark-mode-medium-color: #383838;
+  --backgroundColor: var(--clr-light);
+  --textColor: var(--clr-dark);
+  --mediumColor: var(--clr-medium);
+  --darkModeTransition: color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  /* Defaults */
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 850px;
+  --fixed-width: 620px;
+}
+
+body {
+  font-family: var(--font-default);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  transition: var(--darkModeTransition);
+  background: var(--backgroundColor);
+  color: var(--textColor);
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+hr {
+  border: none;
+  border-top: 1px solid var(--clr-dark);
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  color: var(--clr-dark);
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 0.875rem;
+}
+p {
+  color: var(--textColor);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/* Dark Theme */
+
+.dark-theme {
+  --textColor: var(--dark-mode-text-color);
+  --backgroundColor: var(--dark-mode-bg-color);
+  --mediumColor: var(--dark-mode-medium-color)
+}

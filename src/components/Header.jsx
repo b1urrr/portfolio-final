@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Socials from "./Socials";
+import {Socials} from './'
 
 const Header = () => {
   return (

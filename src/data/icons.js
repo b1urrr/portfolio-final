@@ -12,6 +12,10 @@ import react from "../assets/icons/react.svg";
 import selenium from "../assets/icons/selenium.svg";
 import mongodb from "../assets/icons/mongodb.svg";
 import express from "../assets/icons/express.svg";
+import sass from "../assets/icons/sass.svg";
+import firebase from "../assets/icons/firebase.svg";
+import styled from "../assets/icons/styled.svg";
+
 
 export {
   css3,
@@ -28,4 +32,7 @@ export {
   selenium,
   mongodb,
   express,
+  sass,
+  firebase,
+  styled,
 };

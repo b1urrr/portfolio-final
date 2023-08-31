@@ -55,8 +55,8 @@ export const projects_data = [
     techstack: [react],
     description:
       "This minimalistic portfolio showcasing my work. I've tried to keep it as simple and to the point as possible.",
-    demo: "",
-    github: "https://github.com/b1urrr/re_client",
+    demo: "https://gogov.online/",
+    github: "https://github.com/b1urrr/portfolio-final",
     image: portfolio,
     id: nanoid(),
   },

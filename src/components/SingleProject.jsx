@@ -24,7 +24,7 @@ const SingleProject = ({
               <p>Tech Stack:</p>
             </div>
             {techstack.map((img, index) => {
-              return <img key={index} src={img} alt="tech-stack-icon"/>;
+              return <img key={index} src={img} alt="tech-stack-icon" />;
             })}
           </div>
           <p>{description}</p>
@@ -45,7 +45,9 @@ const SingleProject = ({
         </div>
       </div>
       <div className="image-container">
-        {work_in_progress ? <img className="wip" src={wip} alt="work in progress"/> : null}
+        {work_in_progress ? (
+          <img className="wip" src={wip} alt="work in progress" />
+        ) : null}
         <img className="project-img" src={image} alt="project image" />
       </div>
     </Wrapper>
@@ -148,9 +150,9 @@ const Wrapper = styled.article`
   .image-container .wip {
     position: absolute;
     width: 75px;
-    top: -25px;
+    top: -35px;
     left: 40%;
-    transform: rotate(45deg)
+    transform: rotate(45deg);
   }
   .image-container .project-img {
     width: 400px;
@@ -178,8 +180,14 @@ const Wrapper = styled.article`
     .image-container .wip {
       left: 45%;
     }
+
     .links {
       justify-content: center;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .image-container .wip {
+      left: 38%;
     }
   }
 `;

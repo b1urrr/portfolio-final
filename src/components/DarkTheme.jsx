@@ -16,7 +16,7 @@ const DarkTheme = () => {
   );
 };
 
-const Wrapper = styled.section`
+const Wrapper = styled.header`
   display: flex;
   justify-content: flex-end;
   margin-top: 3rem;
@@ -32,6 +32,9 @@ const Wrapper = styled.section`
   .toggle-icon {
     font-size: 2rem;
     color: var(--textColor);
+  }
+  @media screen and (max-width: 960px) {
+    margin-top: 1rem;
   }
 `;
 

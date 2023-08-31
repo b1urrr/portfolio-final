@@ -1,3 +1,5 @@
+import { nanoid } from "nanoid";
+
 import {
   css3,
   flask,
@@ -16,6 +18,12 @@ import {
   sass,
   firebase,
   styled,
+  morina,
+  restaurantempire,
+  portfolio,
+  realclouds,
+  twitterbot,
+  passwordmanager,
 } from "./icons";
 
 // Projects
@@ -24,24 +32,67 @@ export const projects_data = [
   {
     name: "Restaurant Empire",
     techstack: [react, express, nodejs, mongodb],
-    description: "Restaurant website template with user dashboard to update the menu as needed.",
+    description:
+      "Restaurant website template with user dashboard to update the menu as needed. Type /editmenu after the url to access the add/update/remove features.",
     demo: "https://restaurant-empire-demo.vercel.app/",
     github: "https://github.com/b1urrr/re_client",
-    image: "https://www.sneharatnani.com/_next/image?url=%2Fimg%2Fnotewind.png&w=1080&q=75",
-    id: 1,
+    image: restaurantempire,
+    id: nanoid(),
   },
   {
-    name: "Restaurant Empire",
+    name: "Morina eCommerce",
     techstack: [react, express, nodejs, mongodb],
-    description: "Restaurant website template with user dashboard to update the menu as needed.",
-    demo: "https://restaurant-empire-demo.vercel.app/",
+    description:
+      "An e-commerce web application that I'm currently working on. Most of the front-end is fully functioning. The back-end currently uses a dummy set of products for the purpose of development.",
+    demo: "https://morina-shop.web.app/",
+    github: "https://github.com/b1urrr/morina-client",
+    image: morina,
+    work_in_progress: true,
+    id: nanoid(),
+  },
+  {
+    name: "My Portfolio",
+    techstack: [react],
+    description:
+      "This minimalistic portfolio showcasing my work. I've tried to keep it as simple and to the point as possible.",
+    demo: "",
     github: "https://github.com/b1urrr/re_client",
-    image: "https://www.sneharatnani.com/_next/image?url=%2Fimg%2Fnotewind.png&w=1080&q=75",
-    id: 2,
+    image: portfolio,
+    id: nanoid(),
+  },
+  {
+    name: "realClouds",
+    techstack: [react],
+    description:
+      "Simple weather app for practice. Implemented current date/time, weather now, later in the day, later in the week, search city function etc. Making use of the Open Weather Map APIs.",
+    demo: "https://weather.gogov.online/",
+    github: "https://github.com/b1urrr/weather-app",
+    image: realclouds,
+    id: nanoid(),
+  },
+  {
+    name: "Twitter Bot",
+    techstack: [python, selenium],
+    description:
+      "A bot checking the internet speed via speedtest.net and reporting outcomes to Twitter.",
+    demo: "",
+    github: "https://github.com/b1urrr/twitter-bot",
+    image: twitterbot,
+    id: nanoid(),
+  },
+  {
+    name: "Password Manager",
+    techstack: [python],
+    description:
+      "Simple password manager with GUI. Generates passwords, then stores them in a searchable JSON file. Encryption is not implemented, so if you do decide to use it, store it with caution ;)",
+    demo: "",
+    github: "https://github.com/b1urrr/password-manager",
+    image: passwordmanager,
+    id: nanoid(),
   },
 ];
 
-// Tech-stack # Skills
+// Skills
 
 export const skills = [
   {
@@ -134,5 +185,4 @@ export const skills = [
     icon: photoshop,
     category: "other tools",
   },
-  
 ];

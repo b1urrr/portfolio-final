@@ -7,7 +7,7 @@ const Header = () => {
       <div className="profile">
         <div className="about">
           <h1>Kristian Gogov</h1>
-          <p>Front-end Developer</p>
+          <p>FRONT-END DEVELOPER</p>
           <div className="social">
             <Socials />
           </div>
@@ -57,9 +57,11 @@ const Wrapper = styled.section`
   }
   .about p {
     color: var(--textColor);
+    letter-spacing: 12px;
+    font-weight: 500;
   }
   .social {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   .info {
     margin-top: 3rem;
@@ -87,6 +89,9 @@ const Wrapper = styled.section`
     .about h1 {
       font-size: 40px;
       letter-spacing: -2px;
+    }
+    .about p {
+      letter-spacing: 5px;
     }
   }
 `;

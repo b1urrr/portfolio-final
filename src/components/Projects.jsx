@@ -5,9 +5,9 @@ import { projects_data } from "../data/data";
 
 const Projects = () => {
   return (
-    <>
+    <section>
       {projects_data.map((project) => {return <SingleProject key={project.id} {...project}/>})}
-    </>
+    </section>
   );
 };
 

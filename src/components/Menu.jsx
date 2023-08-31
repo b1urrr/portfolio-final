@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Content from "./Content";
 
 const Menu = () => {
-  const [displayedContent, setDisplayedContent] = useState("");
+  const [displayedContent, setDisplayedContent] = useState("projects");
   return (
     <>
       <Wrapper>
@@ -19,12 +19,6 @@ const Menu = () => {
         >
           Skills
         </button>
-        <button
-          className={displayedContent === "cv" ? "btn active" : "btn"}
-          onClick={() => setDisplayedContent("cv")}
-        >
-          CV
-        </button>
       </Wrapper>
       <Content displayedContent={displayedContent} />
     </>
@@ -38,7 +32,6 @@ const Wrapper = styled.section`
   background-color: var(--mediumColor);
   border-radius: 10px;
   margin-top: 3rem;
-
   .btn {
     margin: 0 0.25rem;
     border: none;

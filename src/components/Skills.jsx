@@ -7,18 +7,18 @@ const Skills = () => {
     <Wrapper>
       {uniqueCategories.map((category, index) => {
         return (
-          <div key={index} className="column">
+          <article key={index} className="column">
             <h3>{category}</h3>
             <div className="line"></div>
             <SingleSkill category={category} />
-          </div>
+          </article>
         );
       })}
     </Wrapper>
   );
 };
 
-const Wrapper = styled.article`
+const Wrapper = styled.section`
   display: flex;
   flex-direction: row;
   gap: 20px;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FiExternalLink } from "react-icons/fi";
 import { BsCodeSlash } from "react-icons/bs";
+import { wip } from "../data/icons";
 
 const SingleProject = ({
   name,
@@ -9,6 +10,7 @@ const SingleProject = ({
   demo,
   github,
   image,
+  work_in_progress,
 }) => {
   return (
     <Wrapper>
@@ -18,19 +20,23 @@ const SingleProject = ({
         </div>
         <div className="info">
           <div className="techstack">
-            <div className="techstack-btn"><p>Tech Stack:</p></div>
+            <div className="techstack-btn">
+              <p>Tech Stack:</p>
+            </div>
             {techstack.map((img, index) => {
               return <img key={index} src={img} />;
             })}
           </div>
-            <p>{description}</p>
+          <p>{description}</p>
         </div>
         <div className="links">
-          <a href={demo}>
-            <button className="btn">
-              Demo <FiExternalLink />
-            </button>
-          </a>
+          {demo ? (
+            <a href={demo}>
+              <button className="btn">
+                Demo <FiExternalLink />
+              </button>
+            </a>
+          ) : null}
           <a href={github} target="_blank">
             <button className="btn">
               Source <BsCodeSlash />
@@ -39,7 +45,8 @@ const SingleProject = ({
         </div>
       </div>
       <div className="image-container">
-        <img src={image} alt="" />
+        {work_in_progress ? <img className="wip" src={wip} alt="work in progress"/> : null}
+        <img className="project-img" src={image} alt="project image" />
       </div>
     </Wrapper>
   );
@@ -58,6 +65,8 @@ const Wrapper = styled.article`
     font-size: 30px;
     letter-spacing: var(--letter-spacing);
     font-weight: 400;
+    text-transform: none;
+    margin-bottom: 0;
   }
   .info img {
     box-shadow: var(--dark-shadow);
@@ -73,6 +82,7 @@ const Wrapper = styled.article`
   .techstack {
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
   }
   .techstack-btn {
     box-shadow: var(--dark-shadow);
@@ -133,8 +143,16 @@ const Wrapper = styled.article`
   .image-container {
     display: flex;
     gap: 5px;
+    position: relative;
   }
-  .image-container img {
+  .image-container .wip {
+    position: absolute;
+    width: 75px;
+    top: -25px;
+    left: 40%;
+    transform: rotate(45deg)
+  }
+  .image-container .project-img {
     width: 400px;
     align-self: center;
   }
@@ -143,6 +161,7 @@ const Wrapper = styled.article`
     align-items: center;
     max-width: 90vw;
     margin: 1rem auto;
+    gap: 1rem;
 
     .header {
       display: flex;
@@ -153,8 +172,14 @@ const Wrapper = styled.article`
       flex-direction: column;
       align-items: center;
     }
-    .image-container img {
+    .image-container .project-img {
       width: 90vw;
+    }
+    .image-container .wip {
+      left: 45%;
+    }
+    .links {
+      justify-content: center;
     }
   }
 `;

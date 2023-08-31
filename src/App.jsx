@@ -1,5 +1,5 @@
 import "./App.css";
-import { DarkTheme, Header, Menu } from "./components";
+import { DarkTheme, Footer, Header, Menu } from "./components";
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <DarkTheme />
       <Header />
       <Menu />
+      <Footer/>
     </>
   );
 }

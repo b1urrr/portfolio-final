@@ -11,9 +11,6 @@ const Content = ({ displayedContent }) => {
   if (displayedContent === "skills") {
     return <Skills />;
   }
-  if (displayedContent === "cv") {
-    return <div>Download CV</div>;
-  }
 };
 
 export default Content;

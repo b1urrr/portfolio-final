@@ -5,3 +5,4 @@ export { default as Socials } from './Socials';
 export { default as DarkTheme } from './DarkTheme';
 export { default as Skills } from './Skills';
 export { default as SingleSkill } from './SingleSkill';
+export { default as Footer } from './Footer';

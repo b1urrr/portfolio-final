@@ -10,17 +10,17 @@ const Socials = () => {
   return (
     <Wrapper>
       <div className="icon">
-        <a href="https://github.com/b1urrr" target="_blank">
+        <a href="https://github.com/b1urrr" target="_blank" aria-label="github">
           <BsGithub />
         </a>
       </div>
       <div className="icon">
-        <a href="https://www.linkedin.com/in/kristiangogov/" target="_blank">
+        <a href="https://www.linkedin.com/in/kristiangogov/" target="_blank" aria-label="linkedin">
           <BsLinkedin />
         </a>
       </div>
       <div className="icon">
-        <a href="mailto:kristiangogow@gmail.com" target="_blank">
+        <a href="mailto:kristiangogow@gmail.com" target="_blank" aria-label="email">
           <BsEnvelopeFill />
         </a>
       </div>
@@ -28,6 +28,7 @@ const Socials = () => {
         <a
           href="https://drive.google.com/file/d/1Q_Nc-150x0NTB3d_BhFzelCer1fOZRAD/view?usp=drive_link"
           target="_blank"
+          aria-label="resume"
         >
           <BsFillFileEarmarkPdfFill /> <span>Download CV</span>
         </a>

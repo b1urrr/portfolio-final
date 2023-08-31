@@ -5,7 +5,7 @@ const DarkTheme = () => {
   const { isDarkTheme, toggleDarkTheme } = useGlobalContext();
   return (
     <Wrapper>
-      <button className="dark-toggle" onClick={toggleDarkTheme}>
+      <button className="dark-toggle" aria-label="theme" onClick={toggleDarkTheme}>
         {isDarkTheme ? (
           <BsFillSunFill className="toggle-icon" />
         ) : (

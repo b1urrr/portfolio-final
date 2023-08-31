@@ -16,7 +16,7 @@ const SingleProject = ({
     <Wrapper>
       <div className="info-container">
         <div className="header">
-          <h3>{name}</h3>
+          <h1>{name}</h1>
         </div>
         <div className="info">
           <div className="techstack">
@@ -24,7 +24,7 @@ const SingleProject = ({
               <p>Tech Stack:</p>
             </div>
             {techstack.map((img, index) => {
-              return <img key={index} src={img} />;
+              return <img key={index} src={img} alt="tech-stack-icon"/>;
             })}
           </div>
           <p>{description}</p>
@@ -60,7 +60,7 @@ const Wrapper = styled.article`
   background: var(--mediumColor);
   padding: 1rem;
   border-radius: 10px;
-  .header h3 {
+  .header h1 {
     color: var(--textColor);
     font-size: 30px;
     letter-spacing: var(--letter-spacing);
